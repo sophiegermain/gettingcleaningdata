@@ -7,7 +7,7 @@ Jorien van den Bergh
 This repo contains all materials submitted for the final course project in the Coursera course "Getting and Cleaning Data".
 
 * A code book describing the variables, the data, and any transformations or work performed to clean up the data (CodeBook.md)
-* The tidy data set according to the project instructions (tidyData2_Jorien.txt)
+* The tidy data set according to the project instructions (tidyData2_JorienvdB.txt)
 * The R script used to create the tidy data set (run_analysis.R)
 * Original data set (folder "UCI HAR Dataset")
 * README.md
