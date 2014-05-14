@@ -36,20 +36,82 @@ The tidy data set contains one row for each subject performing one particular ac
 
 Every row in the data set has a value for the following variables:
 
-subject 1
-        Number of Human Test Subject
-        1..30 .Identifier of the subject who carried out the experiment.
+* subject: Identifier of the subject who carried out the experiment.
+           1..30. Number of test subject
         
-activity 34
-        Physical activity or movement performed by subject while wearing smartphone on the waist
-        WALKING .Walking
-        WALKING_UPSTAIRS  .Walking upstairs
-        WALKING_DOWNSTAIRS  .Walking downstairs
-        SITTING .Sitting down
-        STANDING  .Standing up
-        LAYING  .Laying down
+* activity: Physical activity or movement performed by subject while wearing smartphone on the waist
+            WALKING .Walking
+            WALKING_UPSTAIRS  .Walking upstairs
+            WALKING_DOWNSTAIRS  .Walking downstairs
+            SITTING .Sitting down
+            STANDING  .Standing up
+            LAYING  .Laying down
         
-timebodyaccelerationmeaninxdirectionaverage 
-        Mean linear acceleration of the subject's body in the x direction (normalized), averaged over all occassions subject performed the same activity
-        [-1,1]
+* timebodyaccelerationmeaninxdirectionaverage: Mean linear acceleration of the subject's body in the x direction (normalized), averaged over all occassions subject performed the same activity
+            [-1,1]
         
+* "timebodyaccelerationmeaninydirectionaverage"
+* "timebodyaccelerationmeaninzdirectionaverage"
+* "timebodyaccelerationstandarddeviationinxdirectionaverage"
+* "timebodyaccelerationstandarddeviationinydirectionaverage"
+"timebodyaccelerationstandarddeviationinzdirectionaverage"
+"timegravityaccelerationmeaninxdirectionaverage"
+"timegravityaccelerationmeaninydirectionaverage"
+"timegravityaccelerationmeaninzdirectionaverage"
+"timegravityaccelerationstandarddeviationinxdirectionaverage"
+"timegravityaccelerationstandarddeviationinydirectionaverage"
+"timegravityaccelerationstandarddeviationinzdirectionaverage"
+"timebodyaccelerationjerkmeaninxdirectionaverage"
+"timebodyaccelerationjerkmeaninydirectionaverage"
+"timebodyaccelerationjerkmeaninzdirectionaverage"
+"timebodyaccelerationjerkstandarddeviationinxdirectionaverage"
+"timebodyaccelerationjerkstandarddeviationinydirectionaverage"
+"timebodyaccelerationjerkstandarddeviationinzdirectionaverage"
+"timebodyangularvelocitymeaninxdirectionaverage"
+"timebodyangularvelocitymeaninydirectionaverage"
+"timebodyangularvelocitymeaninzdirectionaverage"
+"timebodyangularvelocitystandarddeviationinxdirectionaverage"
+"timebodyangularvelocitystandarddeviationinydirectionaverage"
+"timebodyangularvelocitystandarddeviationinzdirectionaverage"
+"timebodyangularvelocityjerkmeaninxdirectionaverage"
+"timebodyangularvelocityjerkmeaninydirectionaverage"
+"timebodyangularvelocityjerkmeaninzdirectionaverage"
+"timebodyangularvelocityjerkstandarddeviationinxdirectionaverage"
+"timebodyangularvelocityjerkstandarddeviationinydirectionaverage"
+"timebodyangularvelocityjerkstandarddeviationinzdirectionaverage"
+"timebodyaccelerationmagnitudemeanaverage"
+"timebodyaccelerationmagnitudestandarddeviationaverage"
+"timegravityaccelerationmagnitudemeanaverage"
+"timegravityaccelerationmagnitudestandarddeviationaverage"
+"timebodyaccelerationjerkmagnitudemeanaverage"
+"timebodyaccelerationjerkmagnitudestandarddeviationaverage"
+"timebodyangularvelocitymagnitudemeanaverage"
+"timebodyangularvelocitymagnitudestandarddeviationaverage"
+"timebodyangularvelocityjerkmagnitudemeanaverage"
+"timebodyangularvelocityjerkmagnitudestandarddeviationaverage"
+"frequencybodyaccelerationmeaninxdirectionaverage"
+"frequencybodyaccelerationmeaninydirectionaverage"
+"frequencybodyaccelerationmeaninzdirectionaverage"
+"frequencybodyaccelerationstandarddeviationinxdirectionaverage"
+"frequencybodyaccelerationstandarddeviationinydirectionaverage"
+"frequencybodyaccelerationstandarddeviationinzdirectionaverage"
+"frequencybodyaccelerationjerkmeaninxdirectionaverage"
+"frequencybodyaccelerationjerkmeaninydirectionaverage"
+"frequencybodyaccelerationjerkmeaninzdirectionaverage"
+"frequencybodyaccelerationjerkstandarddeviationinxdirectionaverage"
+"frequencybodyaccelerationjerkstandarddeviationinydirectionaverage"
+"frequencybodyaccelerationjerkstandarddeviationinzdirectionaverage"
+"frequencybodyangularvelocitymeaninxdirectionaverage"
+"frequencybodyangularvelocitymeaninydirectionaverage"
+"frequencybodyangularvelocitymeaninzdirectionaverage"
+"frequencybodyangularvelocitystandarddeviationinxdirectionaverage"
+"frequencybodyangularvelocitystandarddeviationinydirectionaverage"
+"frequencybodyangularvelocitystandarddeviationinzdirectionaverage"
+"frequencybodyaccelerationmagnitudemeanaverage"
+"frequencybodyaccelerationmagnitudestandarddeviationaverage"
+"frequencybodybodyaccelerationjerkmagnitudemeanaverage"
+"frequencybodybodyaccelerationjerkmagnitudestandarddeviationaverage"
+"frequencybodybodyangularvelocitymagnitudemeanaverage"
+"frequencybodybodyangularvelocitymagnitudestandarddeviationaverage"
+"frequencybodybodyangularvelocityjerkmagnitudemeanaverage"
+"frequencybodybodyangularvelocityjerkmagnitudestandarddeviationaverage"
