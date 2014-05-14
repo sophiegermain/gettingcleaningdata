@@ -24,6 +24,7 @@ These transformations were as follows (please see run_analysis.R for the full sc
 * Feature identifiers (numbers) have been replaced by full descriptive names, containing information on:
   * signal domain (denoted by "time" or "frequency")
   * original signal (denoted by "acceleration" or "angularvelocity", with the acceleration signal further split into "bodyacceleration" or "gravityacceleration")
+  * if the signal was derived in time (denoted by "jerk")
   * either axial direction (denoted by "inxdirection", "inydirection" or "inzdirection") or magnitude (denoted by "magnitude") of the vector
   * calculations performed (denoted by "mean" or "standarddeviation").
 * Averages have been taken over all instances in which the same subject performed the same activity, so that the tidy data set contains one row per subject per activity.
@@ -47,71 +48,86 @@ Every row in the data set has a value for the following variables:
     - STANDING  .Standing up
     - LAYING  .Laying down
         
-* timebodyaccelerationmeaninxdirectionaverage: Mean linear acceleration of the subject's body in the x direction (normalized), averaged over all occassions subject performed the same activity
-    - [-1,1]
-        
+* 66 calculated features of the measured movements, which all follow the same syntax rules to form the name of the variable. A list of syntax components follows here, and a full list of features is listed below.
+    - "time" refers to an original time domain signal
+    - "frequency" refers to the Fast Fourier Transform of the original signal
+    - "bodyacceleration" refers to the body acceleration part of the accelerometer signal from the smartphone
+    - "gravityacceleration" refers to the gravity acceleration part of the accelerometer signal from the smartphone
+    - "angularvelocity" refers to the gyroscope signal from the smartphone
+    - "jerk" means the signal was derived in time
+    - "inxdirection"/"inydirection"/"inzdirection" refers to the direction (x,y or z) of the motion vector
+    - "magnitude" refers to the magnitude of the motion vector
+    - "mean" means it is an estimate of the mean of the feature vector for this pattern
+    - "standard deviation" means it is an estimate of the standard deviation of the feature vector for this pattern
+    - "average" means the average was taken over all instances of the subject performing the same activity
+    - Example: timebodyaccelerationmeaninxdirectionaverage: Mean linear acceleration of the subject's body in the x direction (normalized), averaged over all occassions subject performed the same activity
+    - Values of all features have been normalized and are in [-1,1]
+
+The full list of features (66), all of which are composed of the syntax components above:
+
+* "timebodyaccelerationmeaninxdirectionaverage"
 * "timebodyaccelerationmeaninydirectionaverage"
 * "timebodyaccelerationmeaninzdirectionaverage"
 * "timebodyaccelerationstandarddeviationinxdirectionaverage"
 * "timebodyaccelerationstandarddeviationinydirectionaverage"
-"timebodyaccelerationstandarddeviationinzdirectionaverage"
-"timegravityaccelerationmeaninxdirectionaverage"
-"timegravityaccelerationmeaninydirectionaverage"
-"timegravityaccelerationmeaninzdirectionaverage"
-"timegravityaccelerationstandarddeviationinxdirectionaverage"
-"timegravityaccelerationstandarddeviationinydirectionaverage"
-"timegravityaccelerationstandarddeviationinzdirectionaverage"
-"timebodyaccelerationjerkmeaninxdirectionaverage"
-"timebodyaccelerationjerkmeaninydirectionaverage"
-"timebodyaccelerationjerkmeaninzdirectionaverage"
-"timebodyaccelerationjerkstandarddeviationinxdirectionaverage"
-"timebodyaccelerationjerkstandarddeviationinydirectionaverage"
-"timebodyaccelerationjerkstandarddeviationinzdirectionaverage"
-"timebodyangularvelocitymeaninxdirectionaverage"
-"timebodyangularvelocitymeaninydirectionaverage"
-"timebodyangularvelocitymeaninzdirectionaverage"
-"timebodyangularvelocitystandarddeviationinxdirectionaverage"
-"timebodyangularvelocitystandarddeviationinydirectionaverage"
-"timebodyangularvelocitystandarddeviationinzdirectionaverage"
-"timebodyangularvelocityjerkmeaninxdirectionaverage"
-"timebodyangularvelocityjerkmeaninydirectionaverage"
-"timebodyangularvelocityjerkmeaninzdirectionaverage"
-"timebodyangularvelocityjerkstandarddeviationinxdirectionaverage"
-"timebodyangularvelocityjerkstandarddeviationinydirectionaverage"
-"timebodyangularvelocityjerkstandarddeviationinzdirectionaverage"
-"timebodyaccelerationmagnitudemeanaverage"
-"timebodyaccelerationmagnitudestandarddeviationaverage"
-"timegravityaccelerationmagnitudemeanaverage"
-"timegravityaccelerationmagnitudestandarddeviationaverage"
-"timebodyaccelerationjerkmagnitudemeanaverage"
-"timebodyaccelerationjerkmagnitudestandarddeviationaverage"
-"timebodyangularvelocitymagnitudemeanaverage"
-"timebodyangularvelocitymagnitudestandarddeviationaverage"
-"timebodyangularvelocityjerkmagnitudemeanaverage"
-"timebodyangularvelocityjerkmagnitudestandarddeviationaverage"
-"frequencybodyaccelerationmeaninxdirectionaverage"
-"frequencybodyaccelerationmeaninydirectionaverage"
-"frequencybodyaccelerationmeaninzdirectionaverage"
-"frequencybodyaccelerationstandarddeviationinxdirectionaverage"
-"frequencybodyaccelerationstandarddeviationinydirectionaverage"
-"frequencybodyaccelerationstandarddeviationinzdirectionaverage"
-"frequencybodyaccelerationjerkmeaninxdirectionaverage"
-"frequencybodyaccelerationjerkmeaninydirectionaverage"
-"frequencybodyaccelerationjerkmeaninzdirectionaverage"
-"frequencybodyaccelerationjerkstandarddeviationinxdirectionaverage"
-"frequencybodyaccelerationjerkstandarddeviationinydirectionaverage"
-"frequencybodyaccelerationjerkstandarddeviationinzdirectionaverage"
-"frequencybodyangularvelocitymeaninxdirectionaverage"
-"frequencybodyangularvelocitymeaninydirectionaverage"
-"frequencybodyangularvelocitymeaninzdirectionaverage"
-"frequencybodyangularvelocitystandarddeviationinxdirectionaverage"
-"frequencybodyangularvelocitystandarddeviationinydirectionaverage"
-"frequencybodyangularvelocitystandarddeviationinzdirectionaverage"
-"frequencybodyaccelerationmagnitudemeanaverage"
-"frequencybodyaccelerationmagnitudestandarddeviationaverage"
-"frequencybodybodyaccelerationjerkmagnitudemeanaverage"
-"frequencybodybodyaccelerationjerkmagnitudestandarddeviationaverage"
-"frequencybodybodyangularvelocitymagnitudemeanaverage"
-"frequencybodybodyangularvelocitymagnitudestandarddeviationaverage"
-"frequencybodybodyangularvelocityjerkmagnitudemeanaverage"
-"frequencybodybodyangularvelocityjerkmagnitudestandarddeviationaverage"
+* "timebodyaccelerationstandarddeviationinzdirectionaverage"
+* "timegravityaccelerationmeaninxdirectionaverage"
+* "timegravityaccelerationmeaninydirectionaverage"
+* "timegravityaccelerationmeaninzdirectionaverage"
+* "timegravityaccelerationstandarddeviationinxdirectionaverage"
+* "timegravityaccelerationstandarddeviationinydirectionaverage"
+* "timegravityaccelerationstandarddeviationinzdirectionaverage"
+* "timebodyaccelerationjerkmeaninxdirectionaverage"
+* "timebodyaccelerationjerkmeaninydirectionaverage"
+* "timebodyaccelerationjerkmeaninzdirectionaverage"
+* "timebodyaccelerationjerkstandarddeviationinxdirectionaverage"
+* "timebodyaccelerationjerkstandarddeviationinydirectionaverage"
+* "timebodyaccelerationjerkstandarddeviationinzdirectionaverage"
+* "timebodyangularvelocitymeaninxdirectionaverage"
+* "timebodyangularvelocitymeaninydirectionaverage"
+* "timebodyangularvelocitymeaninzdirectionaverage"
+* "timebodyangularvelocitystandarddeviationinxdirectionaverage"
+* "timebodyangularvelocitystandarddeviationinydirectionaverage"
+* "timebodyangularvelocitystandarddeviationinzdirectionaverage"
+* "timebodyangularvelocityjerkmeaninxdirectionaverage"
+* "timebodyangularvelocityjerkmeaninydirectionaverage"
+* "timebodyangularvelocityjerkmeaninzdirectionaverage"
+* "timebodyangularvelocityjerkstandarddeviationinxdirectionaverage"
+* "timebodyangularvelocityjerkstandarddeviationinydirectionaverage"
+* "timebodyangularvelocityjerkstandarddeviationinzdirectionaverage"
+* "timebodyaccelerationmagnitudemeanaverage"
+* "timebodyaccelerationmagnitudestandarddeviationaverage"
+* "timegravityaccelerationmagnitudemeanaverage"
+* "timegravityaccelerationmagnitudestandarddeviationaverage"
+* "timebodyaccelerationjerkmagnitudemeanaverage"
+* "timebodyaccelerationjerkmagnitudestandarddeviationaverage"
+* "timebodyangularvelocitymagnitudemeanaverage"
+* "timebodyangularvelocitymagnitudestandarddeviationaverage"
+* "timebodyangularvelocityjerkmagnitudemeanaverage"
+* "timebodyangularvelocityjerkmagnitudestandarddeviationaverage"
+* "frequencybodyaccelerationmeaninxdirectionaverage"
+* "frequencybodyaccelerationmeaninydirectionaverage"
+* "frequencybodyaccelerationmeaninzdirectionaverage"
+* "frequencybodyaccelerationstandarddeviationinxdirectionaverage"
+* "frequencybodyaccelerationstandarddeviationinydirectionaverage"
+* "frequencybodyaccelerationstandarddeviationinzdirectionaverage"
+* "frequencybodyaccelerationjerkmeaninxdirectionaverage"
+* "frequencybodyaccelerationjerkmeaninydirectionaverage"
+* "frequencybodyaccelerationjerkmeaninzdirectionaverage"
+* "frequencybodyaccelerationjerkstandarddeviationinxdirectionaverage"
+* "frequencybodyaccelerationjerkstandarddeviationinydirectionaverage"
+* "frequencybodyaccelerationjerkstandarddeviationinzdirectionaverage"
+* "frequencybodyangularvelocitymeaninxdirectionaverage"
+* "frequencybodyangularvelocitymeaninydirectionaverage"
+* "frequencybodyangularvelocitymeaninzdirectionaverage"
+* "frequencybodyangularvelocitystandarddeviationinxdirectionaverage"
+* "frequencybodyangularvelocitystandarddeviationinydirectionaverage"
+* "frequencybodyangularvelocitystandarddeviationinzdirectionaverage"
+* "frequencybodyaccelerationmagnitudemeanaverage"
+* "frequencybodyaccelerationmagnitudestandarddeviationaverage"
+* "frequencybodybodyaccelerationjerkmagnitudemeanaverage"
+* "frequencybodybodyaccelerationjerkmagnitudestandarddeviationaverage"
+* "frequencybodybodyangularvelocitymagnitudemeanaverage"
+* "frequencybodybodyangularvelocitymagnitudestandarddeviationaverage"
+* "frequencybodybodyangularvelocityjerkmagnitudemeanaverage"
+* "frequencybodybodyangularvelocityjerkmagnitudestandarddeviationaverage"
