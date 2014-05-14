@@ -28,7 +28,7 @@ These transformations were as follows (please see run_analysis.R for the full sc
   * calculations performed (denoted by "mean" or "standarddeviation").
 * Averages have been taken over all instances in which the same subject performed the same activity, so that the tidy data set contains one row per subject per activity.
 
-Hence, the resulting tidy data set contains 180 rows, one for each of the subject-activity combinations, and 66 columns, one for each of the average features calculated across all instances the subject performed the activity. Further information on all 66 features can be found below in the variable list.
+Hence, the resulting tidy data set contains 180 rows, one for each subject-activity combination, and 66 columns, one for each of the features averaged over all instances the subject performed the activity. Further information on all 66 features can be found below in the variable list.
 
 ## Variables in the tidy data set
 
