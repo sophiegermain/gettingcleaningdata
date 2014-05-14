@@ -1,4 +1,4 @@
-# Code Book for tidyData
+# Code Book for tidyData.txt
 
 ## Data origins
 The data set "tidyData.txt" is based on data collected by Anguita et al. (2012). Thirty human subjects were measured while performing six different basic physical activities by a smartphone (Samsung Galaxy S II) they were wearing on the waist. Measurements were taken of their bodies' linear acceleration and angular momentum using the embedded accelerometer and gyroscope of the smartphone. Both measurements were captured along three axes (X, Y and Z) at a constant rate of 50Hz. The experiments were video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.
@@ -15,11 +15,11 @@ Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012
 
 ## Transformations performed on the data
 
-The data set "tidyData.txt" was derived from the original data by performing several transformations to tidy up the data into one readable table.
+The data set "tidyData.txt" was derived from the original data by performing several transformations to tidy up and summarize the data into one readable table. 
 
-These transformations were:
+These transformations were as follows (please see run_analysis.R for the full script):
 * The train and test subjects were merged together in one data set.
-* Only the means and standard deviations of the time and frequency features have been retained. All other variables have been removed as this study is solely concerned with the basic distribution metrics of 
+* Only the means and standard deviations of the time and frequency features have been retained. All other variables have been removed as this study is solely concerned with the basic distribution metrics (mean, standard deviation) of the features measured.
 * Activity identifiers (numbers) have been replaced by activity descriptors.
 * Feature identifiers (numbers) have been replaced by full descriptive names, containing information on:
 * * signal domain (denoted by "time" or "frequency")
