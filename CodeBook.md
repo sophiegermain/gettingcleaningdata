@@ -37,18 +37,18 @@ The tidy data set contains one row for each subject performing one particular ac
 Every row in the data set has a value for the following variables:
 
 * subject: Identifier of the subject who carried out the experiment.
-    1..30. Number of test subject
+    - 1..30. Number of test subject
         
 * activity: Physical activity or movement performed by subject while wearing smartphone on the waist
-    WALKING .Walking
-            WALKING_UPSTAIRS  .Walking upstairs
-            WALKING_DOWNSTAIRS  .Walking downstairs
-            SITTING .Sitting down
-            STANDING  .Standing up
-            LAYING  .Laying down
+    - WALKING .Walking
+    - WALKING_UPSTAIRS  .Walking upstairs
+    - WALKING_DOWNSTAIRS  .Walking downstairs
+    - SITTING .Sitting down
+    - STANDING  .Standing up
+    - LAYING  .Laying down
         
 * timebodyaccelerationmeaninxdirectionaverage: Mean linear acceleration of the subject's body in the x direction (normalized), averaged over all occassions subject performed the same activity
-            [-1,1]
+    - [-1,1]
         
 * "timebodyaccelerationmeaninydirectionaverage"
 * "timebodyaccelerationmeaninzdirectionaverage"
