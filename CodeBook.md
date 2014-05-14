@@ -49,19 +49,19 @@ Every row in the data set has a value for the following variables:
     - LAYING  .Laying down
         
 * 66 calculated features of the measured movements, which all consist of a concatenation of syntax components to explain what they are. A list of syntax components follows here, and a full list of features is listed below.
-    - "time" refers to an original time domain signal
-    - "frequency" refers to the Fast Fourier Transform of the original signal
-    - "bodyacceleration" refers to the body acceleration part of the accelerometer signal from the smartphone
-    - "gravityacceleration" refers to the gravity acceleration part of the accelerometer signal from the smartphone
-    - "angularvelocity" refers to the gyroscope signal from the smartphone
-    - "jerk" means the signal was derived in time
-    - "inxdirection"/"inydirection"/"inzdirection" refers to the direction (x,y or z) of the motion vector
-    - "magnitude" refers to the magnitude of the motion vector
-    - "mean" means it is an estimate of the mean of the feature vector for this pattern
-    - "standard deviation" means it is an estimate of the standard deviation of the feature vector for this pattern
-    - "average" means the average was taken over all instances of the subject performing the same activity
-       * Example: timebodyaccelerationmeaninxdirectionaverage: Mean linear acceleration of the subject's body in the x direction (normalized), averaged over all occassions subject performed the same activity
-       * Values of all features have been normalized and are in [-1,1]
+       - "time" refers to an original time domain signal
+       - "frequency" refers to the Fast Fourier Transform of the original signal
+       - "bodyacceleration" refers to the body acceleration part of the accelerometer signal from the smartphone
+       - "gravityacceleration" refers to the gravity acceleration part of the accelerometer signal from the smartphone
+       - "angularvelocity" refers to the gyroscope signal from the smartphone
+       - "jerk" means the signal was derived in time
+       - "inxdirection"/"inydirection"/"inzdirection" refers to the direction (x,y or z) of the motion vector
+       - "magnitude" refers to the magnitude of the motion vector
+       - "mean" means it is an estimate of the mean of the feature vector for this pattern
+       - "standard deviation" means it is an estimate of the standard deviation of the feature vector for this pattern
+       - "average" means the average was taken over all instances of the subject performing the same activity
+    * Example: timebodyaccelerationmeaninxdirectionaverage: Mean linear acceleration of the subject's body in the x direction (normalized), averaged over all occassions subject performed the same activity
+    * Values of all features have been normalized and are in [-1,1]
 
 The full list of features (66), all of which are composed of the syntax components above:
 
