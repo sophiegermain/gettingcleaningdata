@@ -10,7 +10,7 @@ This repo contains all materials submitted for the final course project in the C
 * A code book describing the variables, the data, and any transformations or work performed to clean up the data (CodeBook.md)
 * The tidy data set according to the project instructions (tidyData.txt)
 * The R script used to create the tidy data set (run_analysis.R)
-* Original data set (UCI HAR Dataset.zip)
+* Original data set (folder "UCI HAR Dataset")
 
 
 
