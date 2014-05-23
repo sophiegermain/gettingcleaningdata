@@ -74,7 +74,7 @@ subfeatures[,2]<- gsub("std","standarddeviation",subfeatures[,2]) # std for stan
 subfeatures[,2]<- gsub("-x","-inxdirection",subfeatures[,2]) # x for x direction
 subfeatures[,2]<- gsub("-y","-inydirection",subfeatures[,2]) # y for y direction
 subfeatures[,2]<- gsub("-z","-inzdirection",subfeatures[,2]) # z for z direction
-
+subfeatures[,2]<- gsub("-","",subfeatures[,2]) # remove dashes
 
 # Label the columns
 colnames(finalData)<- c("subject","activity", subfeatures$featurename)
@@ -97,13 +97,12 @@ for(i in 1:nsubs){
     extract_data <- subset(finalData, finalData$subject == i & finalData$activity==activities[j,2])
     extract_data[,2]<- NULL
     extract_data[,1]<- NULL
-    adjData[6*(i-1)+j,]<- c(i,as.character(activities[j,2]),colMeans(extract_data))
+    adjData[6*(i-1)+j,]<- c(i,as.character(activities[j,2]),as.double(colMeans(extract_data)))
   }
 }
 
 # Label columns with correct names
 colnames(adjData)<- c("subject","activity", paste0(subfeatures$featurename,"average"))
-
 
 ########################################################
 #### Export tidy data table. ##########################
